@@ -4,10 +4,10 @@ INESC Server Commands
 Update the server
 -----------------
 
-    apt-get update
-    apt-get upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
 
 Add a new user
 -----------------
 
-TODO
+    sudo adduser *newusername*
