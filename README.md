@@ -1,4 +1,14 @@
-inesc_server
-============
+INESC Server Commands
+=====================
 
-FAQ for the INESC server admin services
+Update the server
+-----------------
+
+::
+
+   apt-get update
+   apt-get upgrade
+
+Add a new user
+-----------------
+TODO
