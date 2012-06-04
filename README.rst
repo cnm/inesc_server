@@ -37,3 +37,5 @@ Remove a user
 And to avoid regrets:
 
     sudo mv /home/*changethis*/*oldusername* /home/to_delete
+
+(optional) Check if everything is ok at /etc/passwd
