@@ -39,3 +39,14 @@ And to avoid regrets:
     sudo mv /home/*changethis*/*oldusername* /home/to_delete
 
 (optional) Check if everything is ok at /etc/passwd
+
+Reset a user's password
+-----------------------
+
+    sudo passwd *username*
+
+::
+
+    Upon UNIX prompt for a new password, enter a new one
+    Be sure to confirm by retyping the same new password when prompted again
+    Send the new password to the user who requested the password reset
