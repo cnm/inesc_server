@@ -1,25 +1,25 @@
 1. chroot jail para gaips
-1.1    proc
-1.2    userid acima de 10000
-1.3    firewall cortar portos
-1.4    apache
-1.5    mysql
-1.6    login chroot
+1.1.   proc
+1.2.   userid acima de 10000
+1.3.   firewall cortar portos
+1.4.   apache
+1.5.   mysql
+1.6.   login chroot
 
 2. swap fs no fstab
 3. locales
 4. imaps     TINHAMOS-NOS ESQUECIDO
 
 5. inibir arranque de servicos   NAO TENHO A CERTESA DE QUE ESTEJA 100%
-5.1    gdm
-5.2    imap (sem ser S)
+5.1.    gdm
+5.2.   imap (sem ser S)
 
 6. apache
-6.1    rederecionar outros gaips
-6.2    servir outros grupos
-6.3    nossos sites
-6.4        cnm
-6.5        crc2009
+6.1.    rederecionar outros gaips
+6.2.    servir outros grupos
+6.3.    nossos sites
+6.4.        cnm
+6.5.        crc2009
 
 7. Utilizadores divididos por pastas / ARRUMAR
     Arrumar homes
