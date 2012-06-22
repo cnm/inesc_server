@@ -2,9 +2,9 @@
 
 2. Organize user folders within home directory:
     
-    ::2.1 Remove users in 'to_delete' folder.
+    2.1 Remove users in 'to_delete' folder.
     
-    ::2.2 Lock users' password ("usermod --expiredate 1"), in the 'to_cleanup' folder.
+    2.2 Lock users' password ("usermod --expiredate 1"), in the 'to_cleanup' folder.
 
 3. Exim - Ensure that email relaying is not allowed:
 
