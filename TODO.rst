@@ -16,7 +16,7 @@
 
 5. Stats management:
 
-    web stats,
+    web stats (AWStats),
     eximstats,
     cacti,
     tripwire,
