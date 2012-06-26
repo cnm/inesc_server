@@ -24,3 +24,5 @@
     resultado de apt-get upgrade.
 
 6. Update INESC-ID Server instructions - From PDF to TXT.
+
+7. IPv6
