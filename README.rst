@@ -50,3 +50,12 @@ Reset a user's password
     Upon UNIX prompt for a new password, enter a new one
     Be sure to confirm by retyping the same new password when prompted again
     Send the new password to the user who requested the password reset
+
+Missing memory (RAM) in the server
+----------------------------------
+
+If the memory reported by free is noticeably different from the sum of `ps aux` read the slabtool response in this site:
+
+http://stackoverflow.com/questions/5463800/linux-memory-reporting-discrepancy
+
+It is basically being used in the kernel for caching purposes.

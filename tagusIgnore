@@ -1,0 +1,6 @@
+# Logcheck file for ignoring obnoxious things which fill up the inbox
+# Please copy file to /etc/logcheck/ignore.d.server/tagusIgnore
+# To test them: egrep -f tagusIgnore /var/log/mail.log
+# http://www.agentbob.info/agentbob/g3/83-AB.html
+.+tagus avahi-daemon.+:.*
+.+tagus imapd-ssl:.*
