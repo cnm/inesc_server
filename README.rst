@@ -7,6 +7,7 @@ Update the server
 -----------------
 
     sudo apt-get update
+
     sudo apt-get upgrade
 
 Add a new user
@@ -59,3 +60,17 @@ If the memory reported by free is noticeably different from the sum of `ps aux` 
 http://stackoverflow.com/questions/5463800/linux-memory-reporting-discrepancy
 
 It is basically being used in the kernel for caching purposes.
+
+Update backports
+----------------
+
+Add to the repo list:
+
+    deb http://backports.debian.org/debian-backports/ squeeze-backports main
+
+Then:
+
+    sudo aptitude -t squeeze-backports install "mosh"
+
+    sudo apt-get -t squeeze-backports install "mosh"
+
