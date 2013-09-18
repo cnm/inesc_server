@@ -74,3 +74,14 @@ Then:
 
     sudo apt-get -t squeeze-backports install "mosh"
 
+Repairing mysql tables
+----------------------
+
+Check if something is broken:
+
+    myisamchk  /var/lib/mysql/some_database/\*.MYI
+
+To repair tables:
+
+    myisamchk -r -q /var/lib/mysql/some_database/\*.MYI
+
