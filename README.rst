@@ -85,3 +85,7 @@ To repair tables:
 
     myisamchk -r -q /var/lib/mysql/some_database/\*.MYI
 
+Check raid status
+-----------------
+
+    mdadm --detail /dev/md*
