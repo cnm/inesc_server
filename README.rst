@@ -89,3 +89,29 @@ Check raid status
 -----------------
 
     mdadm --detail /dev/md*
+
+Mailman admin
+-------------
+
+Managed by:
+
+    newlist and rmlist
+
+Old instructions:
+
+    #comandos newlist e rmlist
+    # devido 'a maquina nao ter ip publico e os nomes gaips e tagus serem cname,
+    #os emails podem chegar @inesc-0.tagus.ist.utl.pt
+    # por isso é necessario acrescentar a nova lista na linha 9 do ficheiro
+    #/etc/exim/conf.d/router/970_local_mailman
+    #depois recriar a configuracao do exim com dpkg-reconfigure exim4-config (e'
+    #automaticamente reiniciado)
+    #
+    # o ideal seria a maquina ter ip publico e registos mx
+    # por enquanto nao sera' possivel ter dominios virtuais de email
+    #
+    # exim -bt [-d] <endereco de email>
+    # permite testar se o exim consegue entregar o email
+
+
+
