@@ -117,3 +117,20 @@ Old instructions:
     |
     | exim -bt [-d] <endereco de email>
     | permite testar se o exim consegue entregar o email
+    
+If having problem with other domains then tagus.inesc-id.pt:
+
+    * In file vim /etc/mailman/mm_cfg.py
+    - Line 100
+    | POSTFIX_STYLE_VIRTUAL_DOMAINS = [ 'tagus.inesc-id.pt', 'gaips.inesc-id.pt' , 'citysdk.ist.utl.pt']
+
+    * Restart exim4
+    
+    * Possibly do newaliases comand???
+    
+    * If nothing works, check if DNS MX record is working
+    
+
+
+
+
