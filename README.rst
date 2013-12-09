@@ -117,3 +117,10 @@ Old instructions:
     |
     | exim -bt [-d] <endereco de email>
     | permite testar se o exim consegue entregar o email
+
+Disable a user
+--------------
+
+    passwd <username> -u
+
+Basically justs prepends a ! to the user password in /etc/passwd
