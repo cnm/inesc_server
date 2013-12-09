@@ -118,6 +118,17 @@ Old instructions:
     | exim -bt [-d] <endereco de email>
     | permite testar se o exim consegue entregar o email
 
+If having problem with other domains then tagus.inesc-id.pt:
+
+* In file vim /etc/mailman/mm_cfg.py line 100 add the new host
+
+    | POSTFIX_STYLE_VIRTUAL_DOMAINS = [ 'tagus.inesc-id.pt', 'gaips.inesc-id.pt' , 'citysdk.ist.utl.pt']
+
+
+* Possibly do newaliases comand??? (Please test and correct this doc)
+* Restart exim4
+* If nothing works, check if DNS MX record is established for new domain
+    
 Disable a user
 --------------
 
