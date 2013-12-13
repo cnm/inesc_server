@@ -137,7 +137,7 @@ Disable a user
 Basically justs prepends a ! to the user password in /etc/passwd
 
 
-LLVM commands
+LVM commands
 -------------
 
 
