@@ -135,3 +135,14 @@ Disable a user
     passwd <username> -u
 
 Basically justs prepends a ! to the user password in /etc/passwd
+
+
+LLVM commands
+-------------
+
+
+    pvdisplay -> checks the physical volumes
+    vgdisplay -> shows the volume groups
+    lvextend -l +100%FREE /dev/mapper/vol_group_root-logical-home /dev/md1 -> Fully extends a vol_group
+    
+    
