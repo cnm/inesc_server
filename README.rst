@@ -141,8 +141,8 @@ LLVM commands
 -------------
 
 
-    pvdisplay -> checks the physical volumes
-    vgdisplay -> shows the volume groups
-    lvextend -l +100%FREE /dev/mapper/vol_group_root-logical-home /dev/md1 -> Fully extends a vol_group
+    | pvdisplay -> checks the physical volumes
+    | vgdisplay -> shows the volume groups
+    | lvextend -l +100%FREE /dev/mapper/vol_group_root-logical-home /dev/md1 -> Fully extends a vol_group
     
     
