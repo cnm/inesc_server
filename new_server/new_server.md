@@ -1,3 +1,11 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Hardware](#hardware)
+- [IPMI Remote management](#ipmi-remote-management)
+- [RAID](#raid)
+- [Installation](#installation)
+- [TODO](#todo)
+
 Hardware
 --------
 
