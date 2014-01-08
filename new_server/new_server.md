@@ -1,27 +1,27 @@
 Hardware
 --------
 
-    * CPU: 2 x Intel Xeon E5-2640V2, LGA 2011, 2.0GHz, 8C/16T
-    * RAM: 8 x DDR3 REG16G-1600DDR3, 16GB, DDR3-1600, Registered ECC, memory
-    * Raid Controller: Backup for LSI SAS2208 + Bracket
-    * Server: Supermicro SuperServer 6027R-72RF
-    * Network cards: 2 x Intel Corporation I350 Gigabit Network Connection (rev 01)
-        - eth0 (left): 00:25:90:e1:45:62
-        - eth1 (right): 00:25:90:e1:45:63
-    * IPMI
-        - Mac address: 00-25-90-ce-d6-f6
-    * Disks:
-        Disk IDs were discovered with the following command:
-        'find /dev/disk/by-id/ -iname 'scsi-*' | grep -v -- -part | while read disk ; do echo $(readlink $disk | sed -e s:../../:: ) $(basename $disk); done'
+* CPU: 2 x Intel Xeon E5-2640V2, LGA 2011, 2.0GHz, 8C/16T
+* RAM: 8 x DDR3 REG16G-1600DDR3, 16GB, DDR3-1600, Registered ECC, memory
+* Raid Controller: Backup for LSI SAS2208 + Bracket
+* Server: Supermicro SuperServer 6027R-72RF
+* Network cards: 2 x Intel Corporation I350 Gigabit Network Connection (rev 01)
+  - eth0 (left): 00:25:90:e1:45:62
+  - eth1 (right): 00:25:90:e1:45:63
+* IPMI
+  - Mac address: 00-25-90-ce-d6-f6
+* Disks:
+   - Disk IDs were discovered with the following command:
+     - 'find /dev/disk/by-id/ -iname 'scsi-*' | grep -v -- -part | while read disk ; do echo $(readlink $disk | sed -e s:../../:: ) $(basename $disk); done'
 
-        - 2x SAMSUNG SSD 840 PRO 256GB SATA III
-            - ID="sda scsi-36003048013ed380014b1776d0eee033d"
-            - ID=""
-        - 4x WESTERN DIGITAL 3TB SATA III 64MB RED
-            - ID=""
-            - ID=""
-            - ID=""
-            - ID=""
+   - 2x SAMSUNG SSD 840 PRO 256GB SATA III
+        - ID="sda scsi-36003048013ed380014b1776d0eee033d"
+        - ID=""
+   - 4x WESTERN DIGITAL 3TB SATA III 64MB RED
+        - ID=""
+        - ID=""
+        - ID=""
+        - ID=""
 
 
 lspci command:
