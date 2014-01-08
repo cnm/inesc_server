@@ -224,3 +224,4 @@ Todo list:
  * Disable IPMI access in "normal" interface
  * Ask CIIST for 2 IPs - one public, one private (IPMI)
  * Check if bcache work on debian stable (seems not)
+ * Ask for Calhariz setup ( bcache, SSD in RAID1, SO in HDD)
