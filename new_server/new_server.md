@@ -218,6 +218,9 @@ Debian installation steps:
 TODO
 ----
 
-Mudar pass do Ipmi
-Desligar IPMI na interface normal
-3 IPS - um privado
+Todo list: 
+
+ * Change IPMI pass
+ * Disable IPMI access in "normal" interface
+ * Ask CIIST for 2 IPs - one public, one private (IPMI)
+ * Check if bcache work on debian stable (seems not)
