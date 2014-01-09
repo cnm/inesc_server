@@ -14,10 +14,10 @@ Hardware
 * Raid Controller: Backup for LSI SAS2208 + Bracket
 * Server: Supermicro SuperServer 6027R-72RF
 * Network cards: 2 x Intel Corporation I350 Gigabit Network Connection (rev 01)
-  - eth0 (left): 00:25:90:e1:45:62
+  - eth0 (left): 00:25:90:e1:45:62 --> 172.20.41.138
   - eth1 (right): 00:25:90:e1:45:63
 * IPMI
-  - Mac address: 00-25-90-ce-d6-f6
+  - Mac address: 00-25-90-ce-d6-f6 --> 172.20.41.197
 * Disks:
    - Disk IDs were discovered with the following command:
      - 'find /dev/disk/by-id/ -iname 'scsi-*' | grep -v -- -part | while read disk ; do echo $(readlink $disk | sed -e s:../../:: ) $(basename $disk); done'
@@ -32,7 +32,7 @@ Hardware
         - ID=""
 
 
-lspci command:
+* lspci command:
 
         00:00.0 Host bridge: Intel Corporation Ivytown DMI2 (rev 04)
         00:01.0 PCI bridge: Intel Corporation Device 0e02 (rev 04)
@@ -172,50 +172,47 @@ IPMI Remote management
     * Use IPMIView
         - ftp://ftp.supermicro.com/utility/IPMIView/Linux/
 
+    * Disable IPMI access via normal interface
+        * Using the web browser IPMI page
+            - In configuration -> network
+            - Lan Interface -> Dedicate
+            - Save
+
 
 RAID
 ----
 
 By hardware:
 
+Manual for the software available [here](http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/51530-00_Rev_L.zip)
 
-    Option 1
     Drive Groups
-        - Virtual Drive 0 - RAID 5 - 8.185TB - Set boot drive ??? (Nao é boot drive)
+        - Virtual Drive 0 - RAID 1 - 237.486 GB
+            - Slot:3, SATA, SDD
+            - Slot:7, SATA, SDD
+
+        - Virtual Drive 1 - RAID 5 - 8.185TB
             - Slot:0, SATA, HDD
             - Slot:1, SATA, HDD
             - Slot:4, SATA, HDD
             - Slot:5, SATA, HDD
 
-        - Virtual Drive 1 - RAID 0 - 237.486 GB TODO
-            - Slot:3, SATA, SDD
+Partion by software:
 
-        - Virtual Drive 2 - RAID 0 - 237.486 GB TODO
-            - Slot:7, SATA, SDD
+        - Virtual Drive 0
+            Partitions
+                - 16G - Swap
+                - 40G - /
+                - Rest (184) - Reserved for bcache
 
-    Option 2
-    Drive Groups
-        - Virtual Drive 0 - RAID 5 - 8.185TB
-            - Slot:0, SATA, HDD
-            - Slot:1, SATA, HDD
-            - Slot:4, SATA, HDD
-            - Slot:5, SATA, HDD
-
-        - Virtual Drive 1 - RAID 1 - 237.486 GB 
-            - Slot:3, SATA, SDD
-            - Slot:7, SATA, SDD
-
-    Option 3
-    Drive Groups
-        - Virtual Drive 0 - RAID 5 - 8.185TB - Set boot drive ??? (Nao é boot drive)
-            - Slot:0, SATA, HDD
-            - Slot:1, SATA, HDD
-            - Slot:4, SATA, HDD
-            - Slot:5, SATA, HDD
-
-        - Virtual Drive 1 - RAID 0 - 2x237.486 GB
-            - Slot:3, SATA, SDD
-            - Slot:7, SATA, SDD
+        - Virtual Drive 1
+            Partition
+               - 8.165TB all used with bcache
+                   - lvm on the bcache partition
+                        - /home (5TB)
+                        - /tmp  (300GB)
+                        - /var  (5GB)
+                        - free for future use
 
 Installation
 ------------
@@ -237,16 +234,52 @@ Debian installation steps:
     * username/pass: 
     * Time location: Lisbon
 
-    Disk partition
-        - 
+    * Disk partition
+        - Manual
+            - SDB - 255.0 GB
+                - Create new partition table <Yes>
+                - Select created free-space, create new partition 
+                    - Partition size: 16GB
+                    - Location beginning
+                    - Name: swap
+                    - Use as -> swap area
+                    - Done setting partition
+                - Select the 239 free-space, create new partition 
+                    - Partition size: 40GB
+                    - Location beginning
+                    - Name: OS
+                    - Use as -> Ext4 journal system
+                    - Mount point: /
+                    - Mount option: default
+                    - Bootable flag: On
+                    - Done setting partition
+                - Select the 199 free-space, create new partition 
+                    - Partition size: 200MB
+                    - Location beginning
+                    - Name: EFI_BOOT
+                    - Use as -> EFI boot partition
+                    - Done setting partition
+                - Select the 198.8 free-space, create new partition 
+                    - Partition size: 100%
+                    - Location beginning
+                    - Name: SSD_CACHE
+                    - Use as -> Do not use
+                    - Done setting partition
+            - SDA - 255.0 GB
+                - Create new partition table <Yes>
+                - Select the 9TB free-space, create new partition 
+                    - Partition size: 100%
+                    - Location beginning
+                    - Name: LARGE_VD
+                    - Use as -> Do not use
+                    - Done setting partition
+    * Select repo
+        portugal -> mirrors.nfsi.pt
+
+
 
 TODO
 ----
 
-Todo list: 
-
- * Change IPMI pass
- * Disable IPMI access in "normal" interface
- * Ask CIIST for 2 IPs - one public, one private (IPMI)
  * Check if bcache work on debian stable (seems not)
  * Ask for Calhariz setup ( bcache, SSD in RAID1, SO in HDD)
