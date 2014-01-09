@@ -170,6 +170,8 @@ RAID
 
 By hardware:
 
+
+    Option 1
     Drive Groups
         - Virtual Drive 0 - RAID 5 - 8.185TB - Set boot drive ??? (Nao é boot drive)
             - Slot:0, SATA, HDD
@@ -180,8 +182,31 @@ By hardware:
         - Virtual Drive 1 - RAID 0 - 237.486 GB TODO
             - Slot:3, SATA, SDD
 
-
         - Virtual Drive 2 - RAID 0 - 237.486 GB TODO
+            - Slot:7, SATA, SDD
+
+    Option 2
+    Drive Groups
+        - Virtual Drive 0 - RAID 5 - 8.185TB
+            - Slot:0, SATA, HDD
+            - Slot:1, SATA, HDD
+            - Slot:4, SATA, HDD
+            - Slot:5, SATA, HDD
+
+        - Virtual Drive 1 - RAID 1 - 237.486 GB 
+            - Slot:3, SATA, SDD
+            - Slot:7, SATA, SDD
+
+    Option 3
+    Drive Groups
+        - Virtual Drive 0 - RAID 5 - 8.185TB - Set boot drive ??? (Nao é boot drive)
+            - Slot:0, SATA, HDD
+            - Slot:1, SATA, HDD
+            - Slot:4, SATA, HDD
+            - Slot:5, SATA, HDD
+
+        - Virtual Drive 1 - RAID 0 - 2x237.486 GB
+            - Slot:3, SATA, SDD
             - Slot:7, SATA, SDD
 
 Installation
