@@ -277,6 +277,13 @@ Debian installation steps:
         portugal -> mirrors.nfsi.pt
 
 
+Packages to be installed
+------------------------
+
+Complete list at [TODO](http://somewhere.todo)
+
+    * sudo
+
 
 TODO
 ----
