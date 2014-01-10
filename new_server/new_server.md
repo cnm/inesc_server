@@ -219,22 +219,22 @@ Debian installation steps:
     * Domain Name: tecnico.ulisboa.pt
     * Archive Mirror: Portugal, mirrors.nfsi.pt
     * Proxy: (blank)
-    * Root Password: 
-    * Full Name New User: 
-    * username/pass: 
+    * Root Password:
+    * Full Name New User:
+    * username/pass:
     * Time location: Lisbon
 
     * Disk partition
         - Manual
             - SDB - 255.0 GB
                 - Create new partition table <Yes>
-                - Select created free-space, create new partition 
+                - Select created free-space, create new partition
                     - Partition size: 16GB
                     - Location beginning
                     - Name: swap
                     - Use as -> swap area
                     - Done setting partition
-                - Select the 239 free-space, create new partition 
+                - Select the 239 free-space, create new partition
                     - Partition size: 40GB
                     - Location beginning
                     - Name: OS
@@ -243,13 +243,13 @@ Debian installation steps:
                     - Mount option: default
                     - Bootable flag: On
                     - Done setting partition
-                - Select the 199 free-space, create new partition 
+                - Select the 199 free-space, create new partition
                     - Partition size: 200MB
                     - Location beginning
                     - Name: EFI_BOOT
                     - Use as -> EFI boot partition
                     - Done setting partition
-                - Select the 198.8 free-space, create new partition 
+                - Select the 198.8 free-space, create new partition
                     - Partition size: 100%
                     - Location beginning
                     - Name: SSD_CACHE
@@ -257,7 +257,7 @@ Debian installation steps:
                     - Done setting partition
             - SDA - 255.0 GB
                 - Create new partition table <Yes>
-                - Select the 9TB free-space, create new partition 
+                - Select the 9TB free-space, create new partition
                     - Partition size: 100%
                     - Location beginning
                     - Name: LARGE_VD
@@ -266,6 +266,45 @@ Debian installation steps:
     * Select repo
         portugal -> mirrors.nfsi.pt
 
+    * Reboot
+
+
+Now using the new system:
+
+    * Add ist ciist repos
+        - Add to /etc/apt/sources.list
+
+    deb http://debian.ist.utl.pt/ciist wheezy internal other non-chef
+    deb http://debian.ist.utl.pt/ciist squeeze internal other non-chef
+
+    * Add ciist key
+
+    wget -qO - "http://estocolmo.ist.utl.pt/ciist.key" | apt-key add -
+
+    * Install dsi kernels
+
+        - aptitude update && aptitude install linux-image-3.13.0-rc2-dsi
+
+    * Install bcache userspace utils
+
+        - aptitude install bcache-tools
+
+    * Install parted tools
+
+        - aptitude install parted
+
+    * confirm the partitions (from now assum e sda4 == SSD_CACHE && sdb1 == LARGE_VD)
+
+        - parted list
+
+    * Create backing device (the mechanical disks)
+
+        -  make-bcache -B /dev/sdb1
+
+    * Create cache device (the ssd disks)
+
+        -  make-bcache -C /dev/sda4
+
 
 Packages to be installed
 ------------------------
@@ -273,6 +312,8 @@ Packages to be installed
 Complete list at [TODO](http://somewhere.todo)
 
     * sudo
+    * vim
+    * parted
 
 
 TODO
