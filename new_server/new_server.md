@@ -320,12 +320,61 @@ install bcache
 
     * We now have a /dev/bcache0
 
-    * Create a new disk label
+    * Create a new disk label (i wanted to use gpt, but lvm does not work)
 
-        - parted /dev/bcache0 mklabel gpt
+        - parted /dev/bcache0 mklabel msdos
 
 LVM
 ===
+
+    * Install lvm2
+
+        - aptitude install lvm2
+
+    * Add bcache id type to lvm
+
+        - In line 100 of /etc/lvm/lvm.conf add:
+
+            types = [ "bcache", 16 ]
+
+    * Create physical volume (pv)
+
+        - pvcreate /dev/bcache0
+
+    * Check with pvdisplay
+
+    * Create volume group (vg)
+
+        - vgcreate vg_data /dev/bcache0
+
+    * Check with vgdisplay and vgscan
+
+    * Create the logical volumes (lv)
+
+        - lvcreate --name tmp --size 300G vg_data
+        - lvcreate --name var --size 5G vg_data
+        - lvcreate --name home --size 5TB vg_data
+
+    * Check with lvdisplay and lvscan
+
+    * Create the filesystems
+
+        - mkfs.ext4 /dev/vg_data/tmp
+        - mkfs.ext4 /dev/vg_data/var
+        - mkfs.ext4 /dev/vg_data/home
+
+    * Copy all the content to the new directories (tmp is not necessary)
+
+        - mkdir /tmp/var && mount /dev/vg_data/var /tmp/var && cp -av /var/* /tmp/var; umount /tmp/var
+        - mkdir /tmp/home && mount /dev/vg_data/home /tmp/home && cp -av /home/* /tmp/home; umount /tmp/home
+
+    * Change the fstab to include
+
+        # lvm partitions
+        /dev/vg_data/var  /var auto    defaults  0       0
+        /dev/vg_data/tmp  /tmp auto    defaults  0       0
+        /dev/vg_data/home /home auto   defaults  0       0
+
 
 Packages to be installed
 ------------------------
@@ -335,10 +384,22 @@ Complete list at [TODO](http://somewhere.todo)
     * sudo
     * vim
     * parted
+    * strace
+    * git
+    * zsh
+    * screen
+    * tmux
+    * mosh
+    * ack-grep
+    * apache2
+
+    * mercurial
+    * fio
 
 
 TODO
 ----
 
- * Check if bcache work on debian stable (seems not)
- * Ask for Calhariz setup ( bcache, SSD in RAID1, SO in HDD)
+ * Put acl controls
+ * Package install
+ * Webserver
