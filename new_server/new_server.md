@@ -23,13 +23,7 @@ Hardware
      - 'find /dev/disk/by-id/ -iname 'scsi-*' | grep -v -- -part | while read disk ; do echo $(readlink $disk | sed -e s:../../:: ) $(basename $disk); done'
 
    - 2x SAMSUNG SSD 840 PRO 256GB SATA III
-        - ID="sda scsi-36003048013ed380014b1776d0eee033d"
-        - ID=""
    - 4x WESTERN DIGITAL 3TB SATA III 64MB RED
-        - ID=""
-        - ID=""
-        - ID=""
-        - ID=""
 
 
 * lspci command:
@@ -158,10 +152,6 @@ Hardware
         ff:16.0 System peripheral: Intel Corporation Ivytown System Address Decoder (rev 04)
         ff:16.1 System peripheral: Intel Corporation Ivytown Broadcast Registers (rev 04)
         ff:16.2 System peripheral: Intel Corporation Ivytown Broadcast Registers (rev 04)
-
-dmidecode:
-
-    check dmidecode.txt file
 
 
 IPMI Remote management
