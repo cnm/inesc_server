@@ -269,7 +269,8 @@ Debian installation steps:
     * Reboot
 
 
-Now using the new system:
+install bcache
+==============
 
     * Add ist ciist repos
         - Add to /etc/apt/sources.list
@@ -299,12 +300,32 @@ Now using the new system:
 
     * Create backing device (the mechanical disks)
 
-        -  make-bcache -B /dev/sdb1
+        - make-bcache -B /dev/sdb1
 
     * Create cache device (the ssd disks)
 
-        -  make-bcache -C /dev/sda4
+        - make-bcache -C /dev/sda4
 
+    * Register the cache device against your backing device. We need to find the UUID of your cache device and then add it to the bcache device initially. Udev rules will take care of this on reboot and will only need to be done once.
+
+        - cd /sys/fs/bcache
+        - ls
+        - echo *-*-*-*-* > /sys/block/bcache0/bcache/attach
+
+    *  Change your cache mode (if you want to cache writes as well as reads):
+
+        - echo writeback > /sys/block/bcache0/bcache/cache_mode
+
+    * Reboot (check if really necessary)
+
+    * We now have a /dev/bcache0
+
+    * Create a new disk label
+
+        - parted /dev/bcache0 mklabel gpt
+
+LVM
+===
 
 Packages to be installed
 ------------------------
