@@ -302,3 +302,40 @@ bcache created with make-bcache -b 1024kb -B /dev/sdb1 && make-bcache -b 1024kb 
           sda: ios=241727/952958, merge=3762/264207, ticks=376632/327612, in_queue=703736, util=27.89%
           sdb: ios=3328203/1863334, merge=6056/6701, ticks=2485760/6074096, in_queue=8572180, util=88.95%
 
+bcache created with make-bcache -b 1024kb -B /dev/sdb1 && make-bcache -b 1024kb -C /dev/sda4 over 600 seconds
+-------------------------------------------------------------------------------------------------------------
+
+        rand-read: (g=0): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
+        2.0.8
+        Starting 1 process
+
+        rand-read: (groupid=0, jobs=1): err= 0: pid=3782
+          read : io=3724.8MB, bw=6356.3KB/s, iops=1589 , runt=600071msec
+            slat (usec): min=9 , max=3301 , avg=34.02, stdev=17.76
+            clat (usec): min=1 , max=813190 , avg=20098.33, stdev=26887.09
+             lat (usec): min=123 , max=813216 , avg=20132.85, stdev=26887.44
+            clat percentiles (usec):
+             |  1.00th=[  122],  5.00th=[  139], 10.00th=[  157], 20.00th=[  221],
+             | 30.00th=[ 3664], 40.00th=[ 8640], 50.00th=[12096], 60.00th=[15936],
+             | 70.00th=[22400], 80.00th=[32384], 90.00th=[51456], 95.00th=[72192],
+             | 99.00th=[125440], 99.50th=[148480], 99.90th=[205824], 99.95th=[234496],
+             | 99.99th=[309248]
+            bw (KB/s)  : min=   64, max= 7144, per=100.00%, avg=6364.40, stdev=438.05
+            lat (usec) : 2=0.01%, 100=0.01%, 250=25.23%, 500=4.03%, 750=0.01%
+            lat (usec) : 1000=0.01%
+            lat (msec) : 2=0.02%, 4=1.01%, 10=13.66%, 20=22.71%, 50=22.90%
+            lat (msec) : 100=8.29%, 250=2.10%, 500=0.03%, 750=0.01%, 1000=0.01%
+          cpu          : usr=1.74%, sys=7.74%, ctx=840914, majf=0, minf=54
+          IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=100.0%, >=64=0.0%
+             submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+             complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+             issued    : total=r=953543/w=0/d=0, short=r=0/w=0/d=0
+
+        Run status group 0 (all jobs):
+           READ: io=3724.8MB, aggrb=6356KB/s, minb=6356KB/s, maxb=6356KB/s, mint=600071msec, maxt=600071msec
+
+        Disk stats (read/write):
+            dm-2: ios=953543/7, merge=0/0, ticks=19149336/192, in_queue=19150928, util=100.00%, aggrios=954054/52, aggrmerge=0/0, aggrticks=19156932/4371292, aggrin_queue=0, aggrutil=0.00%
+            bcache0: ios=954054/52, merge=0/0, ticks=19156932/4371292, in_queue=0, util=0.00%, aggrios=477101/15900, aggrmerge=9/54523, aggrticks=9572984/1505270, aggrin_queue=11077798, aggrutil=100.00%
+          sda: ios=279619/31773, merge=10/109024, ticks=50200/267804, in_queue=317640, util=47.95%
+          sdb: ios=674584/27, merge=8/23, ticks=19095768/2742736, in_queue=21837956, util=100.00%
