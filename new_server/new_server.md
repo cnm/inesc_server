@@ -324,6 +324,45 @@ install bcache
 
         - parted /dev/bcache0 mklabel msdos
 
+Testing bcache speed
+####################
+
+* Install fio
+    aptitude install fio
+
+* fio configuration file (tests.fio)
+
+    [global]
+    bs=4k
+    ioengine=libaio
+    iodepth=32
+    size=16g
+    direct=1
+    runtime=60
+    directory=/home/jtrindade/tests
+    filename=fio_test.file
+
+    [seq-read]
+    rw=read
+    stonewall
+
+    [rand-read]
+    rw=randread
+    stonewall
+
+    [seq-write]
+    rw=write
+    stonewall
+
+    [rand-write]
+    rw=randwrite
+    stonewall
+
+* Run fio
+
+    fio test.fio >> results.txt
+
+
 LVM
 ===
 
