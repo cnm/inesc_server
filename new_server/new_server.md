@@ -364,8 +364,11 @@ Testing bcache speed
 
 * Run fio
 
-    fio test.fio >> results.txt
+    fio test.fio > results.txt
 
+* Result file is here:
+
+    https://github.com/cnm/inesc_server/blob/master/new_server/bcache_results.md
 
 LVM
 ===
