@@ -294,7 +294,7 @@ install bcache
 
         - aptitude install parted
 
-    * confirm the partitions (from now assum e sda4 == SSD_CACHE && sdb1 == LARGE_VD)
+    * confirm the partitions (from now assume sda4 == SSD_CACHE && sdb1 == LARGE_VD)
 
         - parted list
 
@@ -328,35 +328,35 @@ Testing bcache speed
 ####################
 
 * Install fio
-    aptitude install fio
+        aptitude install fio
 
 * fio configuration file (tests.fio)
 
-    [global]
-    bs=4k
-    ioengine=libaio
-    iodepth=32
-    size=16g
-    direct=1
-    runtime=60
-    directory=/home/jtrindade/tests
-    filename=fio_test.file
+        [global]
+        bs=4k
+        ioengine=libaio
+        iodepth=32
+        size=16g
+        direct=1
+        runtime=60
+        directory=/home/jtrindade/tests
+        filename=fio_test.file
 
-    [seq-read]
-    rw=read
-    stonewall
+        [seq-read]
+        rw=read
+        stonewall
 
-    [rand-read]
-    rw=randread
-    stonewall
+        [rand-read]
+        rw=randread
+        stonewall
 
-    [seq-write]
-    rw=write
-    stonewall
+        [seq-write]
+        rw=write
+        stonewall
 
-    [rand-write]
-    rw=randwrite
-    stonewall
+        [rand-write]
+        rw=randwrite
+        stonewall
 
 * Run fio
 
