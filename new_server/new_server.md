@@ -304,11 +304,11 @@ install bcache
 
     * Create backing device (the mechanical disks)
 
-        - make-bcache -B /dev/sdb1
+        - make-bcache -b 1024kb -B /dev/sdb1
 
     * Create cache device (the ssd disks)
 
-        - make-bcache -C /dev/sda4
+        - make-bcache -b 1024kb -C /dev/sda4
 
     * Register the cache device against your backing device. We need to find the UUID of your cache device and then add it to the bcache device initially. Udev rules will take care of this on reboot and will only need to be done once.
 
