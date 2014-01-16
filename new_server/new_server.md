@@ -1,10 +1,14 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Hardware](#hardware)
-- [IPMI Remote management](#ipmi-remote-management)
-- [RAID](#raid)
-- [Installation](#installation)
-- [TODO](#todo)
+    - [Hardware](#hardware)
+    - [IPMI Remote management](#ipmi-remote-management)
+    - [RAID](#raid)
+    - [Installation](#installation)
+- [install bcache](#install-bcache)
+- [LVM](#lvm)
+    - [Small tweaks](#small-tweaks)
+    - [Packages to be installed](#packages-to-be-installed)
+    - [TODO](#todo)
 
 Hardware
 --------
@@ -420,9 +424,9 @@ Small tweaks
 Ssh
 ###
 
-* Disable root login
-    Edit /etc/ssh/sshd_config
-        PermitRootLogin no
+    * Disable root login
+        Edit /etc/ssh/sshd_config
+            PermitRootLogin no
 
 Packages to be installed
 ------------------------
