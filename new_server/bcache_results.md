@@ -1,7 +1,8 @@
 Fio results
 ===========
 
-* Without bcache (/home in raid array over hdd)
+Without bcache (/home in raid array over hdd)
+---------------------------------------------
 
         seq-read: (g=0): rw=read, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
         rand-read: (g=1): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
@@ -109,7 +110,8 @@ Fio results
           sdb: ios=4151472/4228172, merge=110301/3324, ticks=3236468/3551900, in_queue=6803160, util=99.71%
 
 
-* bcache created with make-bcache -B /dev/sdb1 && make-bcache -C /dev/sda4
+bcache created with make-bcache -B /dev/sdb1 && make-bcache -C /dev/sda4
+------------------------------------------------------------------------
 
         seq-read: (g=0): rw=read, bs=4k-4k/4k-4k, ioengine=libaio, iodepth=32
         rand-read: (g=1): rw=randread, bs=4k-4k/4k-4k, ioengine=libaio, iodepth=32
@@ -178,7 +180,8 @@ Fio results
         sdb: ios=733223/11, merge=0/0, ticks=2166688/748, in_queue=2167124, util=84.04%
 
 
-* bcache created with make-bcache -b 1024kb -B /dev/sdb1 && make-bcache -b 1024kb -C /dev/sda4
+bcache created with make-bcache -b 1024kb -B /dev/sdb1 && make-bcache -b 1024kb -C /dev/sda4
+--------------------------------------------------------------------------------------------
 
         seq-read: (g=0): rw=read, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
         rand-read: (g=1): rw=randread, bs=4K-4K/4K-4K, ioengine=libaio, iodepth=32
