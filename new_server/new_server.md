@@ -329,7 +329,7 @@ install bcache
         - parted /dev/bcache0 mklabel msdos
 
 Testing bcache speed
-####################
+____________________
 
 * Install fio
         aptitude install fio
@@ -413,6 +413,7 @@ LVM
 
         - mkdir /tmp/var && mount /dev/vg_data/var /tmp/var && cp -av /var/* /tmp/var; umount /tmp/var
         - mkdir /tmp/home && mount /dev/vg_data/home /tmp/home && cp -av /home/* /tmp/home; umount /tmp/home
+        - chmod 1777 /tmp   # TODO (confirm if this is the best option)
 
     * Change the fstab to include
 
@@ -431,6 +432,12 @@ Ssh
         Edit /etc/ssh/sshd_config
             PermitRootLogin no
 
+Sudo
+####
+
+    * Add admins to sudoers group
+        adduser foo sudo
+
 Packages to be installed
 ------------------------
 
@@ -447,7 +454,9 @@ Complete list at [TODO](http://somewhere.todo)
     * mosh
     * ack-grep
     * apache2
-
+    * make
+    * automake
+    * gcc
     * mercurial
     * fio
 
