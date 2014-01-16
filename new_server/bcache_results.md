@@ -1,3 +1,10 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Fio results](#fio-results)
+    - [Without bcache (/home in raid array over hdd)](#without-bcache-home-in-raid-array-over-hdd)
+    - [bcache created with make-bcache -B /dev/sdb1 && make-bcache -C /dev/sda4](#bcache-created-with-make-bcache--b-devsdb1--make-bcache--c-devsda4)
+    - [bcache created with make-bcache -b 1024kb -B /dev/sdb1 && make-bcache -b 1024kb -C /dev/sda4](#bcache-created-with-make-bcache--b-1024kb--b-devsdb1--make-bcache--b-1024kb--c-devsda4)
+
 Fio results
 ===========
 
