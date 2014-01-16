@@ -1,14 +1,14 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-    - [Hardware](#hardware)
-    - [IPMI Remote management](#ipmi-remote-management)
-    - [RAID](#raid)
-    - [Installation](#installation)
-- [install bcache](#install-bcache)
-- [LVM](#lvm)
-    - [Small tweaks](#small-tweaks)
-    - [Packages to be installed](#packages-to-be-installed)
-    - [TODO](#todo)
+- [Hardware](#hardware)
+- [IPMI Remote management](#ipmi-remote-management)
+- [RAID](#raid)
+- [Installation](#installation)
+    - [install bcache](#install-bcache)
+    - [LVM](#lvm)
+- [Small tweaks](#small-tweaks)
+- [Packages to be installed](#packages-to-be-installed)
+- [TODO](#todo)
 
 Hardware
 --------
