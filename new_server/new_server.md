@@ -375,6 +375,15 @@ LVM
         /dev/vg_data/tmp  /tmp auto    defaults  0       0
         /dev/vg_data/home /home auto   defaults  0       0
 
+Small tweaks
+------------
+
+Ssh
+###
+
+* Disable root login
+    Edit /etc/ssh/sshd_config
+        PermitRootLogin no
 
 Packages to be installed
 ------------------------
