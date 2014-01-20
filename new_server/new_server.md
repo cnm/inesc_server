@@ -422,6 +422,29 @@ LVM
         /dev/vg_data/tmp  /tmp auto    defaults  0       0
         /dev/vg_data/home /home auto   defaults  0       0
 
+Acl
+---
+
+    * Install acl
+        apt-get install acl
+
+User quota
+----------
+
+    * Install quota
+        apt-get install quota
+
+    * Activate user quota
+        Edit /etc/fstab
+            /dev/vg_data/home /home auto   usrquota,defaults  0       0
+
+    * Set quota for new users
+        In /etc/adduser.conf
+            set QUOTAUSER="jtrindade" # TODO Maybe a normal user would be best
+
+    * Set the quota for default user (50 GB soft, 100 GB hard)
+        setquota -u jtrindade 50000000 100000000 0 0 /dev/vg_data/home
+
 Small tweaks
 ------------
 
@@ -443,6 +466,7 @@ Packages to be installed
 
 Complete list at [TODO](http://somewhere.todo)
 
+    * acl
     * sudo
     * vim
     * parted
@@ -464,6 +488,5 @@ Complete list at [TODO](http://somewhere.todo)
 TODO
 ----
 
- * Put acl controls
  * Package install
  * Webserver
