@@ -505,6 +505,71 @@ Logcheck
 
                 SENDMAILTO="trindade.joao@gmail.com"
 
+Schroot (very usefull for Trindade simulations)
+-----------------------------------------------
+
+    * Install schroot
+        apt-get install schroot
+
+    * Create directory /etc/schroot/qualnet
+
+    * Create file /etc/schroot/chroot.d/hardy_amd64_jtrindade
+         [hardy_amd64]
+         type=directory
+         #type=plain
+         description=Ubuntu 8.04 Hardy for amd64
+         directory=/home/cnm/jtrindade/chroot/hardy_amd64
+         #personality=linux32
+         root-users=jtrindade
+         #run-setup-scripts=true
+         #run-exec-scripts=true
+         #type=directory
+         users=jtrindade
+         aliases=qualnet
+         script-config=qualnet/config
+
+    * Create file /etc/schroot/qualnet/config
+
+        # Settings for "default" profile.
+        # See schroot.conf(5) and schroot-script-config(5) for further details.
+        # The files detailed below may also be edited to further customise
+        # this profile.
+
+        # Filesystems to mount inside the chroot.
+            FSTAB="/etc/schroot/qualnet/fstab"
+
+        # Files to copy from the host system into the chroot.
+            COPYFILES="/etc/schroot/qualnet/copyfiles"
+
+        # System NSS databases to copy into the chroot.
+            NSSDATABASES="/etc/schroot/qualnet/nssdatabases"
+
+    * Create file /etc/schroot/qualnet/fstab
+        # fstab: static file system information for chroots.
+        # Note that the mount point will be prefixed by the chroot path
+        # (CHROOT_PATH)
+        #
+        # <file system> <mount point>   <type>  <options>   <dump>  <pass>
+        /proc       /proc       none    rw,rbind        0       0
+        /sys        /sys        none    rw,rbind        0       0
+        /dev            /dev            none    rw,rbind        0       0
+        /home/jtrindade/workspace       /home/cnm/jtrindade/workspace   none    rw,bind     0   0
+
+    * Create file /etc/schroot/qualnet/copyfiles
+        # Files to copy into the chroot from the host system.
+        #
+        # <source and destination>
+        /etc/resolv.conf
+        /etc/gshadow
+
+    * Create file /etc/schroot/qualnet/nssdatabases
+        # System databases to copy into the chroot from the host system.
+        #
+        # <database name>
+
+
+
+
 
 Packages to be installed
 ------------------------
@@ -530,6 +595,7 @@ Complete list at [TODO](http://somewhere.todo)
     * tmux
     * vim
     * zsh
+    * rsync
 
 
 TODO
