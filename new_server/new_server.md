@@ -461,32 +461,79 @@ Sudo
     * Add admins to sudoers group
         adduser foo sudo
 
+Cacti
+-----
+
+    * Install cacti
+        apt-get install cacti
+
+    * This will install mysql, just enter the root password for mysql
+
+    * Enter the root password for mysql
+
+    * Enter the password for cacti user in mysql
+
+    * Open browser at http://localhost/cacti
+
+    * Next -> new_install -> Check if found everything -> Finish
+
+    * User: admin pass:admin
+
+    * Import template here **TODO**
+
+    * Install snmp ???? **TODO**
+
+    * Put cacti on https (only) **TODO**
+
+Logcheck
+--------
+
+    * Install logcheck
+        apt-get install logcheck
+
+    * Specify admin email address and the report level in the /etc/logcheck/logcheck.conf
+
+        # Controls the level of filtering:
+        # Can be Set to "workstation", "server" or "paranoid" for different
+        # levels of filtering. Defaults to server if not set.
+
+                 REPORTLEVEL="server"
+
+        # Controls the address mail goes to:
+        # *NOTE* the script does not set a default value for this variable!
+        # Should be set to an offsite "emailaddress@some.domain.tld"
+
+                SENDMAILTO="trindade.joao@gmail.com"
+
+
 Packages to be installed
 ------------------------
 
 Complete list at [TODO](http://somewhere.todo)
 
-    * acl
-    * sudo
-    * vim
-    * parted
-    * strace
-    * git
-    * zsh
-    * screen
-    * tmux
-    * mosh
     * ack-grep
+    * acl
     * apache2
-    * make
     * automake
-    * gcc
-    * mercurial
+    * cacti
     * fio
+    * gcc
+    * git
+    * logcheck
+    * make
+    * mercurial
+    * mosh
+    * parted
+    * screen
+    * strace
+    * sudo
+    * tmux
+    * vim
+    * zsh
 
 
 TODO
 ----
 
- * Package install
- * Webserver
+ * Only allow ssh key (no passwords)??
+ * Finnish configuring cacti (talk to Artur)
