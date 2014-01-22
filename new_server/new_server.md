@@ -596,7 +596,7 @@ Complete list at [TODO](http://somewhere.todo)
     * vim
     * zsh
     * rsync
-
+    * htop
 
 TODO
 ----
