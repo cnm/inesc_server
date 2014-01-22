@@ -597,6 +597,11 @@ Complete list at [TODO](http://somewhere.todo)
     * zsh
     * rsync
     * htop
+    * texlive-latex-recomended
+    * texlive-latex-extra
+    * texlive-science
+    * texlive-fonts-extra
+    * texlive-fonts-recommended
 
 TODO
 ----
