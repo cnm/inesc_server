@@ -602,6 +602,8 @@ Complete list at [TODO](http://somewhere.todo)
     * texlive-science
     * texlive-fonts-extra
     * texlive-fonts-recommended
+    * build-essential
+    * emacs
 
 TODO
 ----
