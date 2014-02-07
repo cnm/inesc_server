@@ -604,6 +604,9 @@ Complete list at [TODO](http://somewhere.todo)
     * texlive-fonts-recommended
     * build-essential
     * emacs
+    * exuberant-ctags
+    * gdb
+
 
 TODO
 ----
