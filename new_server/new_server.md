@@ -477,11 +477,14 @@ Cacti
 
     * Next -> new_install -> Check if found everything -> Finish
 
-    * User: admin pass:admin
+    * User: admin pass: admin
 
-    * Import template here **TODO**
+    * Install snmpd package
 
-    * Install snmp ???? **TODO**
+    * Change /etc/snmp/snmpd.conf
+        Uncomment line
+          #  Full access from the local host
+          rocommunity public  localhost
 
     * Put cacti on https (only) **TODO**
 
