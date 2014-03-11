@@ -571,7 +571,19 @@ Schroot (very usefull for Trindade simulations)
         # <database name>
 
 
+Install java oracle
+-------------------
 
+Simple borrow from a ubuntu ppa:
+
+    * Create a new file in /etc/apt/sources.list.d/oracle_java.list
+        deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main
+        deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main
+
+    * Run the following commands
+        apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+        apt-get update
+        apt-get install oracle-java7-installer
 
 
 Packages to be installed
@@ -609,6 +621,9 @@ Complete list at [TODO](http://somewhere.todo)
     * emacs
     * exuberant-ctags
     * gdb
+    * unzip
+    * java 7 jdk (openJDK)
+    * java 7 jdk (oracle)
 
 
 TODO
