@@ -624,7 +624,9 @@ Complete list at [TODO](http://somewhere.todo)
     * unzip
     * java 7 jdk (openJDK)
     * java 7 jdk (oracle)
-
+    * flex
+    * bison
+    * zip
 
 TODO
 ----
