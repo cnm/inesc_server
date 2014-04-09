@@ -79,6 +79,12 @@ Then:
 
     sudo apt-get -t squeeze-backports install "mosh"
 
+Create new BD and user
+----------------------
+
+mysql> CREATE DATABASE demo;
+mysql> GRANT ALL ON demo.* TO user1@localhost IDENTIFIED BY 'mypassword';
+
 Repairing mysql tables
 ----------------------
 
