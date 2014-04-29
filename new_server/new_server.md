@@ -585,6 +585,35 @@ Simple borrow from a ubuntu ppa:
         apt-get update
         apt-get install oracle-java7-installer
 
+Apache2
+-------
+
+Install apache:
+
+    # aptitude install apache2
+
+
+Enable userdir ~/public_html to serve webpages:
+
+    # a2enmod userdir
+
+Restart apache:
+
+    # service apache2 restart
+
+# To enable php on user directories just comment the following lines in /etc/apache2/mods-available/php5.conf
+
+    # Running PHP scripts in user directories is disabled by default
+    #
+    # To re-enable PHP in user directories comment the following lines
+    # (from <IfModule ...> to </IfModule>.) Do NOT set it to On as it
+    # prevents .htaccess files from disabling it.
+    <IfModule mod_userdir.c>
+        <Directory /home/*/public_html>
+            php_admin_value engine Off
+        </Directory>
+    </IfModule>
+
 
 Packages to be installed
 ------------------------
@@ -628,8 +657,10 @@ Complete list at [TODO](http://somewhere.todo)
     * bison
     * zip
 
+
 TODO
 ----
 
  * Only allow ssh key (no passwords)??
  * Finnish configuring cacti (talk to Artur)
+ * Create SKEL
