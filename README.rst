@@ -82,6 +82,11 @@ Then:
 Create new BD and user
 ----------------------
 
+Login to the mysql as root user:
+
+    mysql -u root -p
+
+
 Add user "user1" to database "demo":
 
     mysql> CREATE DATABASE demo;
