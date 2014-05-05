@@ -85,6 +85,7 @@ Create new BD and user
 Add user "user1" to database "demo":
 
     mysql> CREATE DATABASE demo;
+
     mysql> GRANT ALL ON demo.* TO user1@localhost IDENTIFIED BY 'mypassword';
 
 Repairing mysql tables
