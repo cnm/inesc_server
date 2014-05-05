@@ -553,9 +553,9 @@ Schroot (very usefull for Trindade simulations)
         # (CHROOT_PATH)
         #
         # <file system> <mount point>   <type>  <options>   <dump>  <pass>
-        /proc       /proc       none    rw,rbind        0       0
-        /sys        /sys        none    rw,rbind        0       0
-        /dev            /dev            none    rw,rbind        0       0
+        /proc       /proc       none    rw,bind        0       0
+        /sys        /sys        none    rw,bind        0       0
+        /dev            /dev            none    rw,bind        0       0
         /home/jtrindade/workspace       /home/cnm/jtrindade/workspace   none    rw,bind     0   0
 
     * Create file /etc/schroot/qualnet/copyfiles
