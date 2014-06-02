@@ -615,6 +615,35 @@ Restart apache:
     </IfModule>
 
 
+Setting up Maildir(TODO)
+------------------------
+
+If using Postfix as Message Transfer Agent (MTA) add this line to /etc/postfix/mail.cf:
+
+    home_mailbox = Maildir/
+    
+Configuration for Dovecot
+#########################
+
+Edit /etc/dovecot/dovecot.conf:
+
+    mail_location = maildir:/home/%u/Maildir
+    
+Create maildir in /etc/skel for future users:
+
+    $ sudo maildirmake.dovecot /etc/skel/Maildir
+    $ sudo maildirmake.dovecot /etc/skel/Maildir/.Drafts
+    $ sudo maildirmake.dovecot /etc/skel/Maildir/.Sent
+    $ sudo maildirmake.dovecot /etc/skel/Maildir/.Trash
+    $ sudo maildirmake.dovecot /etc/skel/Maildir/.Templates
+
+For existing users copy skel content and change ownership and permissions:
+
+    $ sudo cp -r /etc/skel/Maildir /home/old_user/
+    $ sudo chown -R old_user:old_user_group /home/old_user/Maildir
+    $ sudo chmod -R 700 /home/old_user/Maildir
+
+
 Packages to be installed
 ------------------------
 
