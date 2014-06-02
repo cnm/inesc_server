@@ -661,6 +661,4 @@ Complete list at [TODO](http://somewhere.todo)
 TODO
 ----
 
- * Only allow ssh key (no passwords)??
- * Finnish configuring cacti (talk to Artur)
  * Create SKEL
