@@ -690,4 +690,4 @@ Complete list at [TODO](http://somewhere.todo)
 TODO
 ----
 
- * Create SKEL
+ * Setup maildir in /etc/skel (when mail system is installed)
