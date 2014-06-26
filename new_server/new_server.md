@@ -197,6 +197,7 @@ Partion by software:
             Partitions
                 - 16G - Swap
                 - 40G - /
+                - 200 MB - EFI (TODO - explain why this is here)
                 - Rest (184) - Reserved for bcache
 
         - Virtual Drive 1
