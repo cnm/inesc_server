@@ -622,14 +622,14 @@ Setting up Maildir(TODO)
 If using Postfix as Message Transfer Agent (MTA) add this line to /etc/postfix/mail.cf:
 
     home_mailbox = Maildir/
-    
+
 Configuration for Dovecot
 #########################
 
 Edit /etc/dovecot/dovecot.conf:
 
     mail_location = maildir:/home/%u/Maildir
-    
+
 Create maildir in /etc/skel for future users:
 
     $ sudo maildirmake.dovecot /etc/skel/Maildir
@@ -687,6 +687,13 @@ Complete list at [TODO](http://somewhere.todo)
     * bison
     * zip
 
+Security
+--------
+
+    To improve security:
+
+
+        apt-get --purge remove nfs-kernel-server nfs-common portmap
 
 TODO
 ----
