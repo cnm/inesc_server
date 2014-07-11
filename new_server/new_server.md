@@ -686,6 +686,7 @@ Complete list at [TODO](http://somewhere.todo)
     * flex
     * bison
     * zip
+    * dos2unix
 
 Security
 --------
