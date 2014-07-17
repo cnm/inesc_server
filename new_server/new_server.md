@@ -687,6 +687,7 @@ Complete list at [TODO](http://somewhere.todo)
     * bison
     * zip
     * dos2unix
+    * ntp
 
 Security
 --------
