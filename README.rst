@@ -24,11 +24,11 @@ When it asks for the user properties::
 
 Then move the home of the user from the default folder to the group folder
 
-    sudo mv /home/*newusername* /home/*[root|gaips]*/
+    sudo mv /home/*newusername* /home/*[cnm|gaips]*/
 
 And change it in /etc/passwd:
 
-    *newusername*:x:1000:1000:Some Name,,,:/home/**[root|gaips]**/*newusername*:/bin/bash
+    *newusername:x:1000:1000:Some Name,,,:/home/**[cnm|gaips]**/*newusername*:/bin/bash
 
 Also, create its imap directory structure (TODO this should be in the skel):
 
