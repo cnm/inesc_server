@@ -696,6 +696,20 @@ Security
 
 
         apt-get --purge remove nfs-kernel-server nfs-common portmap
+        
+Add a new user
+--------------
+
+    sudo adduser *newusername*
+
+When it asks for the user properties::
+
+   In room number insert where the user is normally located
+   In Work phone the phone extension of the room.
+   In the home phone, his personal mobile.
+   In the other property, insert the group the user belongs to and who is responsible for him
+   
+Don't forget to create a good password for him. Use http://passwordsgenerator.net/ p.ex.
 
 TODO
 ----
