@@ -721,17 +721,20 @@ TODO
  * verificar se IPv6 funciona bem (Afonso)
  * Configurar servidor de email (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
+ * Criar quotas no uso do disco (Afonso)
+ * Verificar se há ACL de acesso aos disco (Afonso)
 
 Migração
 ---------
  * Enviar email aos utilizadores antigos a dizer que servidor vai deixar de existir. Quem quiser que peça conta no novo e copie as suas coisas. (Ricardo)
  
- * Nomes actuais do servidor antigo:
+ * Nomes actuais do servidor antigo (sites):
    * tagus.inesc-id.pt (migrar. esperar redireccionamento emails)
+   * https://tagus.inesc-id.pt/participation (migrar)
    * cnm.tagus.inesc-id.pt (migrar)
    * gaips.inesc-id.pt (fica)
    * minerva.inesc-id.pt (fica - redirect http gaips)
-   * poster100.ist.utl.pt (esquecer!)
+   * poster100.ist.utl.pt (tentar perceber o que devia ser? Se não for fácil esquecer!)
 
  * Migrar sites (Afonso)
  * Pedir alterações de DNS (Ricardo)
