@@ -714,4 +714,28 @@ Don't forget to create a good password for him. Use http://passwordsgenerator.ne
 TODO
 ----
 
- * Setup maildir in /etc/skel (when mail system is installed)
+ * Setup maildir in /etc/skel (when mail system is installed) (Afonso)
+ * tratar do reverse DNS para citysdk.tecnico.ulisboa.pt (Ricardo)
+ * apagar o citysdk.tagus.ist.utl.pt (Ricardo)
+ * transformar o citysdk.tecnico.ulisboa.pt num registo A e AAAA (Ricardo)
+ * verificar se IPv6 funciona bem (Afonso)
+ * Configurar servidor de email (Afonso)
+ * Pedir para máquina poder receber e enviar emails (Ricardo)
+
+Migração
+---------
+ * Enviar email aos utilizadores antigos a dizer que servidor vai deixar de existir. Quem quiser que peça conta no novo e copie as suas coisas. (Ricardo)
+ 
+ * Nomes actuais do servidor antigo:
+   * tagus.inesc-id.pt (migrar. esperar redireccionamento emails)
+   * cnm.tagus.inesc-id.pt (migrar)
+   * gaips.inesc-id.pt (fica)
+   * minerva.inesc-id.pt (fica - redirect http gaips)
+   * poster100.ist.utl.pt (esquecer!)
+
+ * Migrar sites (Afonso)
+ * Pedir alterações de DNS (Ricardo)
+
+ * Pedir ao gaips lista de email a redirecionar (Ricardo, pedir reunião com Gonçalo)
+ * Configurar redirecções de email (Afonso)
+ * colocar nova máquina com tagus.inesc-id.pt (Ricardo)
