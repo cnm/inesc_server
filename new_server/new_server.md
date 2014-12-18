@@ -718,7 +718,6 @@ TODO
  * tratar do reverse DNS para citysdk.tecnico.ulisboa.pt (Ricardo)
  * apagar o citysdk.tagus.ist.utl.pt (Ricardo)
  * transformar o citysdk.tecnico.ulisboa.pt num registo A e AAAA (Ricardo)
- * verificar se IPv6 funciona bem (Afonso)
  * Configurar servidor de email (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
  * Criar quotas no uso do disco (Afonso)
