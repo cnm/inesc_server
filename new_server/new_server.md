@@ -720,7 +720,7 @@ TODO
  * transformar o citysdk.tecnico.ulisboa.pt num registo A e AAAA (Ricardo)
  * Configurar servidor de email (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
- * Criar quotas no uso do disco (Afonso)
+ * Criar quotas no uso do disco (80G soft e 100G hard é como está, está bem assim? Que quota ponho ao Simão que está a usar 2T?)
  * Verificar se há ACL de acesso aos disco (Afonso)
 
 Migração
