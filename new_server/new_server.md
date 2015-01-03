@@ -721,7 +721,8 @@ TODO
  * Configurar servidor de email (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
  * Criar quotas no uso do disco (80G soft e 100G hard é como está, está bem assim? Que quota ponho ao Simão que está a usar 2T?)
- * Verificar se há ACL de acesso aos disco (Afonso)
+ * Verificar se há ACL de acesso ao disco (Afonso) (Criar? O que é que se bloqueia, mais especificamente?)
+ * (Configurar apache para páginas do tipo domain.com/~user)(Afonso) - ?
 
 Migração
 ---------
