@@ -18,7 +18,7 @@ Hardware
 * Raid Controller: Backup for LSI SAS2208 + Bracket
 * Server: Supermicro SuperServer 6027R-72RF
 * Network cards: 2 x Intel Corporation I350 Gigabit Network Connection (rev 01)
-  - eth0 (left): 00:25:90:e1:45:62 --> 172.20.41.138
+  - eth0 (left): 00:25:90:e1:45:62 --> 193.136.166.72
   - eth1 (right): 00:25:90:e1:45:63
 * IPMI
   - Mac address: 00-25-90-ce-d6-f6 --> 172.20.41.197
