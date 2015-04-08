@@ -714,15 +714,13 @@ Don't forget to create a good password for him. Use http://passwordsgenerator.ne
 TODO
 ----
 
- * Setup maildir in /etc/skel (when mail system is installed) (Afonso)
+ * Setup maildir in /etc/skel (when mail system is installed) (Afonso) (Sendo o mail apenas de redirecionamento, esta pasta já não será necessária)
  * tratar do reverse DNS para citysdk.tecnico.ulisboa.pt (Ricardo)
  * apagar o citysdk.tagus.ist.utl.pt (Ricardo)
  * transformar o citysdk.tecnico.ulisboa.pt num registo A e AAAA (Ricardo)
- * Configurar servidor de email (Afonso)
+ * Configurar redireccionamento de emails (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
  * Criar quotas no uso do disco (80G soft e 100G hard é como está, está bem assim? Que quota ponho ao Simão que está a usar 2T?)
- * Verificar se há ACL de acesso ao disco (Afonso) (Criar? O que é que se bloqueia, mais especificamente?)
- * (Configurar apache para páginas do tipo domain.com/~user)(Afonso) - ?
 
 Migração
 ---------
