@@ -721,10 +721,17 @@ TODO
  * Configurar redireccionamento de emails (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
  * ~~Criar quotas no uso do disco (80G soft e 100G hard é como está, está bem assim? Que quota ponho ao Simão que está a usar 2T?)~~
+ * Adicionar software da LSI para saber estado do raid. Será [isto?](http://hwraid.le-vert.net/wiki/LSIMegaRAIDSAS#a3.2.megaraid-status)
+ * Garantir que estado dos discos está monitorizado no cacti
+ * Crontab semanal a verificar estado dos discos?
+ * Instalar tripwire
+ * Usar keepassx no github para guardar as passwords (cacti, mysql, etc...)
+ * colocar firewall básica?
+
 
 Migração
 ---------
- * Enviar email aos utilizadores antigos a dizer que servidor vai deixar de existir. Quem quiser que peça conta no novo e copie as suas coisas. (Ricardo)
+ * ~~Enviar email aos utilizadores antigos a dizer que servidor vai deixar de existir. Quem quiser que peça conta no novo e copie as suas coisas. (Ricardo)~~
  
  * Nomes actuais do servidor antigo (sites):
    * tagus.inesc-id.pt (migrar. esperar redireccionamento emails)
