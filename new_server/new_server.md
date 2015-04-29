@@ -15,7 +15,7 @@ Hardware
 
 * CPU: 2 x Intel Xeon E5-2640V2, LGA 2011, 2.0GHz, 8C/16T
 * RAM: 8 x DDR3 REG16G-1600DDR3, 16GB, DDR3-1600, Registered ECC, memory
-* Raid Controller: Backup for LSI SAS2208 + Bracket
+* Raid Controller: Backup for [LSI SAS2208](https://www.supermicro.com/manuals/other/LSI_2108_2208_SAS_MegaRAID_Configuration_Utility.pdf) + Bracket
 * Server: [Supermicro SuperServer 6027R-72RF](http://www.supermicro.com/products/system/2U/6027/SYS-6027R-72RF.cfm)
 * Network cards: 2 x Intel Corporation I350 Gigabit Network Connection (rev 01)
   - eth0 (left): 00:25:90:e1:45:62 --> 193.136.166.72
