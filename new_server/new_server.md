@@ -445,6 +445,24 @@ User quota
 
     * Set the quota for default user (50 GB soft, 100 GB hard)
         setquota -u jtrindade 50000000 100000000 0 0 /dev/vg_data/home
+        
+        
+        
+IPTables Rules
+--------------
+
+```sh
+#Allow Selected TCP services
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+#Drop between 1 and 1024 and coming from eth0
+iptables -A INPUT -i eth0 -p tcp --match multiport --dports 1:1024 -j DROP
+iptables -A INPUT -i eth0 -p tcp --match multiport --dports 1:1024 -j DROP
+#Reject Forward
+iptables -A FORWARD -j REJECT
+```
+
 
 Small tweaks
 ------------
@@ -725,8 +743,8 @@ TODO
  * Garantir que estado dos discos está monitorizado no cacti
  * Crontab semanal a verificar estado dos discos?
  * Instalar tripwire
- * Usar keepassx no github para guardar as passwords (cacti, mysql, etc...)
- * colocar firewall básica?
+ * ~~Usar keepassx no github para guardar as passwords (cacti, mysql, etc...)~~
+ * ~~colocar firewall básica?~~
  * Arranjar certificado para HTTPS
 
 
