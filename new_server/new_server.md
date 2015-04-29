@@ -716,7 +716,7 @@ TODO
 
  * Setup maildir in /etc/skel (when mail system is installed) (Afonso) (Sendo o mail apenas de redirecionamento, esta pasta já não será necessária)
  * tratar do reverse DNS para citysdk.tecnico.ulisboa.pt (Ricardo)
- * apagar o citysdk.tagus.ist.utl.pt (Ricardo)
+ * ~~apagar o citysdk.tagus.ist.utl.pt (Ricardo)~~
  * transformar o citysdk.tecnico.ulisboa.pt num registo A e AAAA (Ricardo)
  * Configurar redireccionamento de emails (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
