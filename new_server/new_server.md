@@ -16,7 +16,7 @@ Hardware
 * CPU: 2 x Intel Xeon E5-2640V2, LGA 2011, 2.0GHz, 8C/16T
 * RAM: 8 x DDR3 REG16G-1600DDR3, 16GB, DDR3-1600, Registered ECC, memory
 * Raid Controller: Backup for LSI SAS2208 + Bracket
-* Server: Supermicro SuperServer 6027R-72RF
+* Server: [Supermicro SuperServer 6027R-72RF](http://www.supermicro.com/products/system/2U/6027/SYS-6027R-72RF.cfm)
 * Network cards: 2 x Intel Corporation I350 Gigabit Network Connection (rev 01)
   - eth0 (left): 00:25:90:e1:45:62 --> 193.136.166.72
   - eth1 (right): 00:25:90:e1:45:63
@@ -720,7 +720,7 @@ TODO
  * transformar o citysdk.tecnico.ulisboa.pt num registo A e AAAA (Ricardo)
  * Configurar redireccionamento de emails (Afonso)
  * Pedir para máquina poder receber e enviar emails (Ricardo)
- * Criar quotas no uso do disco (80G soft e 100G hard é como está, está bem assim? Que quota ponho ao Simão que está a usar 2T?)
+ * ~~Criar quotas no uso do disco (80G soft e 100G hard é como está, está bem assim? Que quota ponho ao Simão que está a usar 2T?)~~
 
 Migração
 ---------
