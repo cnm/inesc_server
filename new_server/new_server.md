@@ -727,6 +727,7 @@ TODO
  * Instalar tripwire
  * Usar keepassx no github para guardar as passwords (cacti, mysql, etc...)
  * colocar firewall básica?
+ * Arranjar certificado para HTTPS
 
 
 Migração
