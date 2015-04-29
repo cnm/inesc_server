@@ -742,6 +742,7 @@ Migração
    * poster100.ist.utl.pt (tentar perceber o que devia ser? Se não for fácil esquecer!)
 
  * Migrar sites (Afonso)
+ * Migrar mailing lists
  * Pedir alterações de DNS (Ricardo)
 
  * Pedir ao gaips lista de email a redirecionar (Ricardo, pedir reunião com Gonçalo)
