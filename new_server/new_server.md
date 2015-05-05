@@ -448,12 +448,16 @@ User quota
         
         
         
-IPTables Rules
---------------
+IPTables
+--------
+
+Rules
+#####
 
 ```sh
 #Allow Selected TCP services
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 25 -j ACCEPT
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 #Drop between 1 and 1024 and coming from eth0
@@ -461,6 +465,19 @@ iptables -A INPUT -i eth0 -p tcp --match multiport --dports 1:1024 -j DROP
 iptables -A INPUT -i eth0 -p tcp --match multiport --dports 1:1024 -j DROP
 #Reject Forward
 iptables -A FORWARD -j REJECT
+```
+
+Save
+####
+
+```sh
+iptables-save > /etc/iptables.rules
+```
+
+Add following line to /etc/network/interfaces:
+
+```sh
+pre-up iptables-restore < /etc/iptables.rules
 ```
 
 
