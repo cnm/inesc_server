@@ -773,14 +773,14 @@ Migração
    * tagus.inesc-id.pt (migrar. esperar redireccionamento emails)
    * https://tagus.inesc-id.pt/participation (migrar)
    * cnm.tagus.inesc-id.pt (migrar)
-   * gaips.inesc-id.pt (fica)
-   * minerva.inesc-id.pt (fica - redirect http gaips)
+   * ~~gaips.inesc-id.pt (fica)~~
+   * ~~minerva.inesc-id.pt (fica - redirect http gaips)~~
    * poster100.ist.utl.pt (tentar perceber o que devia ser? Se não for fácil esquecer!)
 
  * Migrar sites (Afonso)
  * Migrar mailing lists
  * Pedir alterações de DNS (Ricardo)
 
- * Pedir ao gaips lista de email a redirecionar (Ricardo, pedir reunião com Gonçalo)
+ * ~~Pedir ao gaips lista de email a redirecionar (Ricardo, pedir reunião com Gonçalo)~~
  * Configurar redirecções de email (Afonso)
  * colocar nova máquina com tagus.inesc-id.pt (Ricardo)
